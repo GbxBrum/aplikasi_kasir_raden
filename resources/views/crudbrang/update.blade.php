@@ -50,13 +50,13 @@
         <form class="registration-form" action="{{url('admin/tambahkan')}}" method="POST">
             @csrf 
             <div class="form-group">
-                <input type="text" class="form-control" name="nama_produk" id="nama_produk" placeholder="Nama Produk">
+                <input type="text" class="form-control" name="nama_produk" id="nama_produk" placeholder="Nama Produk" value="{{$i->nama_produk}}">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="harga" id="harga" placeholder="harga">
+                <input type="text" class="form-control" name="harga" id="harga" placeholder="harga" value="{{$i->harga}}">
             </div>
             <div class="form-group">
-                <input type="number" class="form-control" name="stok" id="stok" placeholder="stok">
+                <input type="number" class="form-control" name="stok" id="stok" placeholder="stok" value="{{$i->stok}}">
             </div>
             <button type="submit" class="btn btn-primary btn-block registration-btn">Tambah</button>
         </form>

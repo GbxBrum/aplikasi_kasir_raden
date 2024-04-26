@@ -20,19 +20,21 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ($gweh as $i)
+                    
                 <tr>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
+                   <td>{{$i->id_produk}}</td>
+                   <td>{{$i->nama_produk}}</td>
+                   <td>{{$i->harga}}</td>
+                   <td>{{$i->stok}}</td>
                    <td>
-                    {{-- <a type="submit" href="{{ url('edit/' . $i->PetugasId) }}"
-                         class="btn btn-secondary"><i class="bi bi-pencil-square"></i></a>
-                     <a href="hapusadmin/{{ $i->PetugasId }}"><button type="submit"
-                             class="btn btn-danger"><i class="bi bi-trash"></i></button></a>  --}}
-                 </td>
+                       <a type="submit" href=""
+                       class="btn btn-secondary"><i class="bi bi-pencil-square"></i></a>
+                        <a type="submit" href="{{url('hapusbarang'.$i->id_produk)}}"
+                       class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                    </td>
                 </tr>
+                @endforeach
                 <!-- Tambahkan baris tambahan sesuai kebutuhan -->
             </tbody>
         </table>

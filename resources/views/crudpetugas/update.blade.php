@@ -79,7 +79,7 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-primary btn-block registration-btn">Regist</button>
-            <a type="submit" href="{{url('listpetugas')}}" class="btn btn-primary btn-block registration-btn">kembali</a>
+            <a type="submit" href="{{url('admin/listpetugas')}}" class="btn btn-primary btn-block registration-btn">kembali</a>
         </form>
        
     </div>

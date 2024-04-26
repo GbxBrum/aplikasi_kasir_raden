@@ -39,7 +39,7 @@
                                 <td>
                                     <a type="submit" href="{{ url('edit/' . $i->id_petugas) }}" class="btn btn-secondary"><i
                                             class="bi bi-pencil-square"></i></a>
-                                    <a href=""><button type="submit" class="btn btn-danger"><i
+                                    <a href="hapus/{{$i->id_petugas}}"><button type="submit" class="btn btn-danger"><i
                                                 class="bi bi-trash"></i></button></a>
                                 </td>
                             </tr>

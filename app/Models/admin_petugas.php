@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class admin_petugas extends Model
 {
-    protected $table ='admin_petugas';
+    protected $table ='admin_petugasns';
     protected $primarykey = 'id_petugas';
     public $incrementing = false;
     protected $keyType = 'string';

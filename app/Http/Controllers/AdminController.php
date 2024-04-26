@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\admin_petugas;
+use App\Models\produk;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -27,7 +28,8 @@ class AdminController extends Controller
         return view('admin.datapetugas',['burnbrain'=>$codingakut->all()]);
     }
     public function barang(){
-        return view('admin.databarang');
+        $sipalingcoding = new produk();
+        return view('admin.databarang',['gweh'=>$sipalingcoding->all()]);
     }
     public function tambahbarng(){
         return view('crudbrang.create');
@@ -43,23 +45,41 @@ class AdminController extends Controller
     public function tambahpetugas(Request $request){
         $a = new admin_petugas();
         $a -> create($request->all());
-        return view('crudpetugas.create');
+        return redirect('admin/listpetugas');
          
     }
     // edit
     public function editmimin($admin){
         $q = admin_petugas::select('*')->where('id_petugas', $admin)->get();
-        return view ('crudpetugas.create',['bug'=>$q]);
+        return view ('crudpetugas.update',['bug'=>$q]);
     }
     public function admined(Request $request, $admin){
         $iq = admin_petugas::where('id_petugas',$admin)->update([
             'username' => $request->username,
             'password' => $request->password,
             'email' => $request->email,
+            'nomor_telepon' => $request->nomor_telepon,
             'nama_lengkap' => $request->nama_lengkap,
-            'role' => $request->role,
+            'role' => $request->role,   
             'alamat' => $request->alamat
         ]);
         return redirect('admin/listpetugas');
     }
+
+    public function tambahinbarang(request $request){
+        $b = new produk();
+        $b ->create($request->all());
+        return redirect('admin/infobarang');
+    }
+    public function adminhapus($id_petugas){
+        $gason = new admin_petugas();
+        $gason = $gason->find($id_petugas);
+        $gason -> delete();
+        return back();
+    }
+
+
+    // public function barangedit(){
+    //     return view()
+    // }
 }

@@ -19,11 +19,26 @@ route::prefix('admin')->group(function () {
     route::get('listpetugas', [AdminController::class, 'list']);
     route::get('tambahpetugas', [AdminController::class, 'regispetugas']);
     route::post('tambahcek', [AdminController::class, 'tambahpetugas']);
-
-    
     // end  
+
+    // hapus admin
+    route::get('hapus/{admin}', [AdminController::class, 'adminhapus']);
+
+    //end
+    
     // barang
     route::get('infobarang', [AdminController::class, 'barang']);
+    route::get('tambahbarang', [AdminController::class, 'tambahbarng']);
+    route::post('tambahkan', [AdminController::class, 'tambahinbarang']);
     // end
 });
-route::get('edit{admin}',[AdminController::class,'editmimin']);
+//edit
+route::get('edit/{admin}',[AdminController::class,'editmimin']);
+route::post('edit/{admin}',[AdminController::class,'admined']);
+//end
+// edit
+
+//end
+
+// hapus
+// end

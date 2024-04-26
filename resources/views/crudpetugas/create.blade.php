@@ -47,7 +47,7 @@
 <body>
     <div class="registration-container">
         <h2 class="registration-heading">Registration</h2>
-        <form class="registration-form" action="{{url('tambahcek')}}" method="POST">
+        <form class="registration-form" action="{{url('admin/tambahcek')}}" method="POST">
             @csrf 
             <div class="form-group">
                 <input type="text" class="form-control" name="username" id="username" placeholder="username">
@@ -77,7 +77,7 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-primary btn-block registration-btn">Regist</button>
-            <a type="submit" href="{{url('listpetugas')}}" class="btn btn-primary btn-block registration-btn">kembali</a>
+            <a type="submit" href="{{url('admin/listpetugas')}}" class="btn btn-primary btn-block registration-btn">kembali</a>
         </form>
        
     </div>

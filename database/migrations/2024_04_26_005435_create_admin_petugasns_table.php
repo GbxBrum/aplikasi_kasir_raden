@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('admin_petugas', function (Blueprint $table) {
+        Schema::create('admin_petugasns', function (Blueprint $table) {
             $table->integer('id_petugas');
             $table->string('username');
             $table->string('password');
