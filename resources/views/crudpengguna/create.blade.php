@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah</title>
+    <title>Registration</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -46,24 +46,22 @@
 </head>
 <body>
     <div class="registration-container">
-        <h2 class="registration-heading">Tambah Data Barang</h2>
-        @foreach ($A as $i)
-            @endforeach
-        <form class="registration-form" action="{{url('editbarang/'.$i->id_produk)}}" method="POST">
-            
+        <h2 class="registration-heading">Registration</h2>
+        <form class="registration-form" action="{{url('admin/tambahcek')}}" method="POST">
             @csrf 
             <div class="form-group">
-                <input type="text" class="form-control" name="nama_produk" id="nama_produk" placeholder="Nama Produk" value="{{$i->nama_produk}}">
+                <input type="text" class="form-control" name="nama_pelanggan" id="nama_pelangga" placeholder="nama_pelanggan">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="harga" id="harga" placeholder="harga" value="{{$i->harga}}">
+                <input type="text" class="form-control" name="alamat" id="alamat" placeholder="alamat">
             </div>
             <div class="form-group">
-                <input type="number" class="form-control" name="stok" id="stok" placeholder="stok" value="{{$i->stok}}">
-            </div>
-            <button type="submit" class="btn btn-primary btn-block registration-btn">Update</button>
+                <input type="number" class="form-control" name="nomor_telepon" id="nomor_telepon" placeholder="nomor_telepon" >
+            </div>  
+            <button type="submit" class="btn btn-primary btn-block registration-btn">Regist</button>
+            <a type="submit" href="{{url('admin/listpetugas')}}" class="btn btn-primary btn-block registration-btn">kembali</a>
         </form>
-         <a href="{{url('admin/infobarang')}}" class="btn btn-primary btn-block registration-btn">Kembali</a>
+       
     </div>
 
     <!-- Bootstrap JS and dependencies -->

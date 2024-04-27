@@ -28,7 +28,7 @@
                         <li><a class="dropdown-item" href="#!">Settings</a></li>
                         <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                        <li><a class="dropdown-item bi bi-box-arrow-in-lef" href="#!">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -39,7 +39,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="{{ url('dashadmin') }}">
+                            <a class="nav-link" href="{{ url('admin/dashboard') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
@@ -58,7 +58,11 @@
                             </a>
                             <a class="nav-link" href="{{ url('admin/listpetugas') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
-                                List Anggota
+                                List petugas
+                            </a>
+                            <a class="nav-link" href="{{ url('admin/pelanggan') }}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                                Data Pelanggan
                             </a>
                             
                         </div>
